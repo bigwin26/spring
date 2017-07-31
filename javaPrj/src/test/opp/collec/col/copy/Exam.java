@@ -55,9 +55,4 @@ public class Exam {
 		this.math = math;
 	}
 
-	public Exam get(int i) {
-		
-		return null;
-	}
-
 }

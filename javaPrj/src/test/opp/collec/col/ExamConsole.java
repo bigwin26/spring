@@ -70,18 +70,21 @@ public class ExamConsole {
 		exam.setMath(math);
 
 		//////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+		// 
+		 * 
+		 * 
+		 * if (index >= capacity) {
 
-		/*
-		 * //exams[index++] = exam; if (index >= capacity) {
-		 * 
-		 * 
-		 * 
-		 * //1. 새로운 배열을 생성 +2 Exam[] temp = new Exam[capacity+2]; //2. 새로운 배열로 이동 for
-		 * (int i = 0; i < exams.length; i++) temp[i] = exams[i]; //3.새로운 배열을 exam이라한다.
-		 * exams = temp; //4.새로운 용량을 표기한다. capacity +=2; }
-		 * 
-		 * exams[index++] = exam;
-		 */
+		// 1. 새로운 배열을 생성 +2
+		Exam[] temp = new Exam[capacity + 2]; // 2. 새로운 배열로 이동
+		for (int i = 0; i < exams.length; i++) {
+			temp[i] = exams[i]; // 3.새로운 배열을 exam이라한다.
+			exams = temp; // 4.새로운 용량을 표기한다.
+			capacity += 2;
+		}
+
+		exams[index++] = exam;*/
 
 		exams.add(exam);
 

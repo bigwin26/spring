@@ -5,23 +5,9 @@ import java.util.Scanner;
 import oop.collec.col.Exam;
 
 public class ExamConsole {
-
-	/*
-	 * private Exam[] exams; 
-	 * private int index; 
-	 * private int capacity;
-	 */
-	// 참조형 배열 3개를 만들었다. 저장 공간을 만들어야하는데,\
 	private ExamList exams;
+	// 참조형 배열 3개를 만들었다. 저장 공간을 만들어야하는데,\
 
-	public ExamConsole() {
-
-		/*		
-		 * exams[i] = new Exam[3]; 
-		 * index = 0; 
-		 * capacity = 3;
-		 */
-	}
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -43,54 +29,40 @@ public class ExamConsole {
 		int kor = 0;
 		int eng = 0;
 		int math = 0;
+		
+			do {
+				if (kor < 0 || kor > 100)
+					System.out.println("유효하지 않은 범위입니다.");
 
-		do {
-			if (kor < 0 || kor > 100)
-				System.out.println("유효하지 않은 범위입니다.");
+				System.out.print("\t국어 :  \n");
+				kor = scan.nextInt();
+			} while (kor < 0 || kor > 100);
 
-			System.out.print("\t국어 :  \n");
-			kor = scan.nextInt();
-		} while (kor < 0 || kor > 100);
+			do {
+				if (eng < 0 || eng > 100)
+					System.out.println("유효하지 않은 범위입니다.");
 
-		do {
-			if (eng < 0 || eng > 100)
-				System.out.println("유효하지 않은 범위입니다.");
+				System.out.print("\t영어 :  \n");
+				eng = scan.nextInt();
+			} while (eng < 0 || eng > 100);
 
-			System.out.print("\t영어 :  \n");
-			eng = scan.nextInt();
-		} while (eng < 0 || eng > 100);
+			do {
+				if (math < 0 || math > 100)
+					System.out.println("유효하지 않은 범위입니다.");
 
-		do {
-			if (math < 0 || math > 100)
-				System.out.println("유효하지 않은 범위입니다.");
+				System.out.print("\t수학 :  \n");
+				math = scan.nextInt();
+			} while (math < 0 || math > 100);
 
-			System.out.print("\t수학 :  \n");
-			math = scan.nextInt();
-		} while (math < 0 || math > 100);
+			Exam exam = new Exam();
+			exam.setKor(kor);
+			exam.setEng(eng);
+			exam.setMath(math);
 
-		Exam exam = new Exam();
-		exam.setKor(kor);
-		exam.setEng(eng);
-		exam.setMath(math);
+			exams.add(exam);
 
-		//////////////////////////////////////////////////////////////////////////////////////////////////
-
-		/*
-		 * //exams[index++] = exam; if (index >= capacity) {
-		 * 
-		 * 
-		 * 
-		 * //1. 새로운 배열을 생성 +2 Exam[] temp = new Exam[capacity+2]; //2. 새로운 배열로 이동 for
-		 * (int i = 0; i < exams.length; i++) temp[i] = exams[i]; //3.새로운 배열을 exam이라한다.
-		 * exams = temp; //4.새로운 용량을 표기한다. capacity +=2; }
-		 * 
-		 * exams[index++] = exam;
-		 */
-
-		exams.add(exam);
-
-	}
-	//////////////////////////////////////////////////////////////////////////////////////////////////
+		}
+	
 
 	public void print() {
 
@@ -99,8 +71,8 @@ public class ExamConsole {
 		System.out.println("└───────────────────────────────┘");
 
 		for (int i = 0; i < exams.size(); i++) {
+
 			Exam exam = exams.get(i);
-			// Exam exam = exams[i];
 			int kor = exam.getKor();
 			int math = exam.getMath();
 			int eng = exam.getEng();
