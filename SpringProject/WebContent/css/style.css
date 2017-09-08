@@ -1,0 +1,344 @@
+@charset "UTF-8";
+
+a {
+	color: #979797;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------- */
+.hidden {
+	display: none;
+}
+
+.clearfix::after {
+	content: "";
+	clear: left;
+	display: block;
+}
+
+body {
+	font-family: 돋음, Arial, sans-serif;
+	font-size: 11px;
+	color: #979797;
+}
+/* ----------------------------------------text-style----------------------------------- */
+.text-left{
+	text-align: left;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-right{
+	text-align: right;
+}
+
+.text-indent{
+	text-indent: 10px;
+}
+
+.text-strong{
+	color:black;
+	font-weight: bold;
+}
+
+/* ----------------------------------------btn-style----------------------------------- */
+.btn {
+	display: inline-block;
+	border: 0px;
+	cursor: pointer;
+	overflow: hidden;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	padding: 3px 8px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.btn-img {
+	display: inline-block;
+	border: 0px;
+	cursor: pointer;
+	overflow: hidden;
+	text-indent: -999px; /* 왼쪽으로 밈 (들여쓰기) */
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.btn-default {
+	/* background-color: #759d2a; */
+	background: -webkit-radial-gradient(center, ellipse cover, #9dcf40 0%, #698c26 100%);
+	border-color: #608618;
+}
+
+.btn-default:hover {
+	background: -webkit-radial-gradient(center, ellipse cover, #698c26 0%, #9dcf40 100%);
+	text-decoration: none;
+}
+
+.btn-search {
+	width: 31px;
+	height: 25px;
+	background: url("../images/btn-zoom.png") no-repeat center;
+	border-left: 1px solid #8CBA34;
+}
+
+.btn-cancel {
+	width: 64px;
+	height: 23px;
+	background: url("../images/btn-cancel.png") no-repeat center;
+}
+/* ----list-목록 스타일---------------------------------------------------------------- */
+.hr-list {
+	display: inline-block;
+}
+
+.hr-list>ul {
+	overflow: auto;
+	display: flex;
+}
+
+.hr-list.pad li:first-child {
+	padding-left: 0px;
+	background: none;
+}
+
+/*       .hr-list a{
+         font-family: 맑은 고딕, 고딕, sans-serif;
+         font-size: 10px;
+         font-weight: bold;
+         color: #979797;
+      } */
+/* --------------------격자형(table)스타일------------------------ */
+.table {
+	display: table;
+	width: 100%;
+	border-top: 2px solid #8cba35;
+	table-layout: fixed;
+}
+
+.table tr, .table .tr {
+	display: table-row;
+	height: 30px;
+	line-height: 30px;
+}
+
+.table tr td, .table tr th, .table .tr td, .table .tr th {
+	display: table-cell; border-bottom : 1px solid #e9e9e9;
+	text-align: center;
+	border-bottom: 1px solid #e9e9e9;
+}
+
+.table tr th, .table .tr th {
+	background: #f5f5f5 url("../images/bg-title-sp.png") no-repeat left
+		center;
+}
+
+
+.table tr td.text-left,
+ .table tr th.text-left,
+  .table .tr td.text-left,
+   .table .tr th.text-left{
+	text-align: left;
+}
+/* --------------------------------main style--------------------------------- */
+main .title{
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+}
+
+main .main{
+	font-family: 맑은 고딕, 고딕, sans-serif;
+   font-size: 21px;
+   font-weight: bold;
+   color: #646464;
+   padding-left: 25px;
+   background: url("../images/icon-main-title.png") no-repeat left center;
+}
+
+main .sub{
+	
+}
+
+main table .wd60{
+	min-width: 60px;
+}
+
+main table .wd100{
+	min-width: 100px;
+}
+
+main table .wd400{
+	max-width: 400px;
+}
+/* --------------------------------------------------------------------- */
+#header {
+	height: 70px;
+}
+
+#header>.content-container {
+	position: relative;
+}
+
+#header>.content-container>section>*, #logo {
+	position: absolute;
+}
+
+#logo {
+	top: 23px;
+	left: 0px;
+	display: inline-block;;
+}
+
+#logo img {
+	vertical-align: middle;
+}
+
+#main-menu {
+	display: inline-block;
+	left: 200px;
+	top: 27px;
+	overflow: auto;
+}
+
+#main-menu ul>li {
+	float: left;
+	padding-left: 24px;
+	background: url("../images/bg-main-menu-vsp.png") no-repeat 13px center;
+}
+
+#main-menu a {
+	font-family: 맑은 고딕, 고딕, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #000000;
+}
+
+#main-menu ul>li:last-child>a {
+	color: #ff6a00;
+}
+
+#search-form {
+	width: 308px;
+	height: 25px;
+	border: 5px solid #8CBA34;
+	left: 468px;
+	top: 21px;
+}
+
+#search-form form {
+	display: flex;
+}
+
+#search-form input[type=text] {
+	flex-grow: 1;
+	border: 0px;
+}
+
+#search-form label {
+	align-self: center;
+	padding: 0px 5px;
+}
+
+#member-menu {
+	right: 0px;
+	top: 20px;
+}
+
+#member-menu ul>li {
+	float: left;
+	padding-left: 9px;
+	background: url("../images/bg-member-menu-sp.png") no-repeat 13px center;
+}
+
+#member-menu a {
+	font-family: 맑은 고딕, 고딕, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #979797;
+}
+
+#custom-menu {
+	right: 0px;
+	top: 40px;
+}
+
+.content-container {
+	margin: auto;
+	min-height: inherit;
+	height: 100%;
+	width: 960px;
+}
+
+#visual {
+	border-top: solid 3px #8cba34;
+	background: #313131 url("../images/bg-visual.png") no-repeat center
+		center;
+	height: 171px;
+}
+
+#visual .content-container {
+	background: #313131 url("../images/customer/visual.png") no-repeat
+		center center;
+}
+/* -----body style----------------------------------------------------------- */
+#body {
+	margin-top: 1px;
+	border-top: solid 5px #8cba34;
+	min-height: 300px;
+}
+
+#body .content-container {
+	background: url("../images/bg-body.png") repeat-y left top;
+}
+
+#aside {
+	float: left;
+	min-height: inherit;
+	width: 205px;
+	height: 300px;
+	background: url("../images/bg-aside-title.png") no-repeat left top;
+}
+
+#main {
+	float: left;
+	min-height: inherit;
+	width: 755px;
+	padding-left: 35px;
+	padding-top: 45px;
+	box-sizing: border-box;
+}
+
+/* -----footer style----------------------------------------------------------- */
+#footer {
+	background: #313131;
+	height: 100px;
+}
+
+/* 
+#floating{
+   position: relative;
+   width: 100%;
+   height: 300px;
+   background: orange;
+   top: 10px;
+   left: 0px;
+   bottom: 0px;
+}
+
+#floating > div{
+   position: absolute;
+   width: 100px;
+   height: 100px;
+   background: olive;
+   left: 0px;
+   top: -10px;
+} */

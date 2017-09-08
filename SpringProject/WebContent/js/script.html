@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	/* var data = [2,4,6,8,0];
+	var entity = {id:1, title:"he;llo", writerId:"y"}
+	
+	/* for(var i =0; i<data.length; i++)
+		alert(data[i]);
+	 *//* 
+	for(var i in data)
+		alert(data[i]); 
+	 
+	 for(vaer k in entity)
+		 alert(entity[k]);
+		 */
+		
+/* var json =[
+	{id:"1",title:"title"},
+	{id:"2",title:"good"}
+];
+alert(json[1].title]);
+alert(json[1]["title"]);
+ */
+ /* var data = eval('({id:"1",title:"title"})'); */
+/*  var data = JSON.parse('{"id":1,"title":"title"}'); 
+alert(typeof data.title); */
+
+/* var x = 3;
+var y = new Number(3);
+
+alert(x === y); //false
+alert(3.5-"2"); //true */
+/* 
+var add = new Function("x,y", "return x+y");
+alert(add(3,8));
+ */
+/* var add = function(){
+/* 	return x+y;
+};
+alert(add(3,8,19));
+ 
+ var sum = 0;
+ 
+ for(var i=0; i<arguments.length; i++)
+	 sum += arguments[i];
+ 
+ return sum;
+ 
+ };
+ 
+alert(add(1,2,3,4,5));
+ */
+ /* function f1(){
+ 	var a=1;
+ 
+ 		return function f2(){
+ 			return a;
+ 		}
+ 		}
+ var f = f1();
+ var a = f();
+ alert(a);
+  */
+  function printResult(){
+ var x,y;
+ x = prompt("x 값을 입력하세요", 0);
+ y = prompt("y 값을 입력하세요", 0);
+x = parseInt(x);
+y = parseInt(y);
+ btn.value=x+y;
+  }
+</script>
+<input type="button" value="출력" id="btn" onclick="printResult();"/>
+</body>
+</html>
+
+<!-- type of = 데이터형식을 출력해줌.
+제이슨사용시 표기법준수. 숫자에는 ""안넣음. -->
